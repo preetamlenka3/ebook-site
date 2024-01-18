@@ -26,7 +26,7 @@ You can view a live demo of the Amazon eBook Page [here](https://preetamlenka3.g
 1. Clone the repository:
 
    ```bash
-   git clone [https://github.com/your-username/amazon-ebook-page.git](https://github.com/preetamlenka3/ebook-site.git)https://github.com/preetamlenka3/ebook-site.git
+   git clone https://github.com/preetamlenka3/ebook-site.git
    ```
 
 2. Open the index.html file in your web browser.
@@ -34,10 +34,10 @@ You can view a live demo of the Amazon eBook Page [here](https://preetamlenka3.g
 ## Customization
 Feel free to customize the content, styling, and add your own eBooks or products. Update the navigation links in the navbar and add your own information.
 
-# Styling
+### Styling
 You can customize the styling by modifying the CSS in the <style> tag within the index.html file.
 
-# Adding More Products
+### Adding More Products
 To add more products, copy the structure of the existing product cards in the index.html file. Update the eBook titles, descriptions, and iframe source links accordingly.
 
 ## Contributing
