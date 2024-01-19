@@ -67,6 +67,9 @@
       height: 400px;
       border: none;
     }
+    #visitor-form {
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -129,6 +132,53 @@
       </div>
     </div>
   </div>
+
+  <!-- Visitor Form -->
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <form id="visitor-form">
+          <h3 class="mb-3">Visitor Information</h3>
+          <div class="form-group">
+            <label for="visitorName">Name:</label>
+            <input type="text" class="form-control" id="visitorName" required>
+          </div>
+          <div class="form-group">
+            <label for="visitorEmail">Email:</label>
+            <input type="email" class="form-control" id="visitorEmail" required>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="submitForm()">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Your existing scripts -->
+
+  <script>
+    function submitForm() {
+      // Get form values
+      var name = document.getElementById('visitorName').value;
+      var email = document.getElementById('visitorEmail').value;
+
+      // Create a visitor object
+      var visitor = {
+        name: name,
+        email: email
+      };
+
+      // Retrieve existing visitors from localStorage or initialize an empty array
+      var existingVisitors = JSON.parse(localStorage.getItem('visitors')) || [];
+
+      // Add the new visitor to the array
+      existingVisitors.push(visitor);
+
+      // Save the updated array back to localStorage
+      localStorage.setItem('visitors', JSON.stringify(existingVisitors));
+
+      // Optionally, you can display a success message or perform other actions
+      alert('Visitor information submitted successfully!');
+    }
+  </script>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
